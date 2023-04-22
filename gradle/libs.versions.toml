@@ -1,0 +1,70 @@
+[versions]
+accompanist = "0.30.1"
+androidxActivity = "1.7.1"
+androidxBenchmark = "1.2.0-alpha13"
+androidxComposeBom = "2023.04.01"
+androidxComposeCompiler = "1.4.6"
+androidxCore = "1.10.0"
+androidGradlePlugin = "8.0.0"
+androidxHiltCompiler = "1.0.0"
+androidxHiltNavigationCompose = "1.0.0"
+androidxLifecycle = "2.6.1"
+androidxNavigation = "2.5.3"
+androidxTestEspresso = "3.5.1"
+androidxTestExt = "1.1.5"
+androidxUiautomator = "2.2.0"
+coil = "2.3.0"
+compose = "1.4.0"
+hilt = "2.45"
+junit4 = "4.13.2"
+kotlin = "1.8.20"
+kotlinxCoroutines = "1.6.4"
+licenseTools = "1.2.8"
+paparazzi = "1.2.0"
+spotless = "6.11.0"
+
+[libraries]
+accompanist-webview = { module = "com.google.accompanist:accompanist-webview", version.ref = "accompanist" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
+androidx-benchmark-macro = { module = "androidx.benchmark:benchmark-macro-junit4", version.ref = "androidxBenchmark" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui" }
+androidx-compose-material-iconsExtended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-material3-windowSizeClass = {group = "androidx.compose.material3", name = "material3-window-size-class" }
+androidx-compose-ui-test = { module = "androidx.compose.ui:ui-test-junit4" }
+androidx-compose-ui-testManifest = { module = "androidx.compose.ui:ui-test-manifest" }
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "androidxHiltCompiler" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
+androidx-lifecycle-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+androidx-lifecycle-java8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewModel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewModel-savedState = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "androidxLifecycle" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidxNavigation" }
+androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidxTestEspresso" }
+androidx-test-ext = { module = "androidx.test.ext:junit-ktx", version.ref = "androidxTestExt" }
+androidx-test-uiautomator = { module = "androidx.test.uiautomator:uiautomator", version.ref = "androidxUiautomator" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+junit4 = { module = "junit:junit", version.ref = "junit4" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+android-test = { id = "com.android.test", version.ref = "androidGradlePlugin" }
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+license-tools = { id = "com.cookpad.android.plugin.license-tools", version.ref = "licenseTools" }
+paparazzi = { id = "app.cash.paparazzi", version.ref = "paparazzi" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
