@@ -5,6 +5,7 @@ androidxBenchmark = "1.2.0-alpha13"
 androidxComposeBom = "2023.04.01"
 androidxComposeCompiler = "1.4.6"
 androidxCore = "1.10.0"
+androidxDatastore = "1.1.0-alpha03"
 androidGradlePlugin = "8.0.0"
 androidxHiltCompiler = "1.0.0"
 androidxHiltNavigationCompose = "1.0.0"
@@ -41,6 +42,8 @@ androidx-compose-ui-testManifest = { module = "androidx.compose.ui:ui-test-manif
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+androidx-datastore-preferences-core = { module = "androidx.datastore:datastore-preferences-core", version.ref = "androidxDatastore" }
+androidx-datastore-core-okio = { module = "androidx.datastore:datastore-core-okio", version.ref = "androidxDatastore" }
 androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "androidxHiltCompiler" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
 androidx-lifecycle-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }

@@ -37,6 +37,7 @@ kotlin {
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material)
+//                implementation(compose.materialIconsExtended)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
 
@@ -51,6 +52,11 @@ kotlin {
                 implementation(libs.ktor.client.logging)
                 implementation(libs.ktor.client.serialization)
                 implementation(libs.ktor.serialization.kotlinx.json)
+
+                api(libs.androidx.datastore.preferences.core)
+                api(libs.androidx.datastore.core.okio)
+
+                implementation("com.russhwolf:multiplatform-settings:1.0.0")
             }
         }
         val androidMain by getting {
@@ -60,6 +66,7 @@ kotlin {
 
                 implementation(libs.ktor.client.okhttp)
                 implementation(libs.androidx.lifecycle.ktx)
+                implementation("androidx.security:security-crypto-ktx:1.1.0-alpha06")
             }
         }
         val iosMain by getting {

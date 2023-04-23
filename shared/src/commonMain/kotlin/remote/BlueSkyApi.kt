@@ -48,20 +48,29 @@ class KtorBlueSkyApi : BlueSkyApi {
         username: String,
         appPassword: String
     ): ApiResult<CreateSessionResponse, ErrorResponse> {
-        val httpResponse = client.post("${BaseUrl}com.atproto.server.createSession") {
-            contentType(ContentType.Application.Json)
-            setBody(
-                CreateSessionBody(
-                    identifier = username,
-                    password = appPassword,
+        try {
+            val httpResponse = client.post("${BaseUrl}com.atproto.server.createSession") {
+                contentType(ContentType.Application.Json)
+                setBody(
+                    CreateSessionBody(
+                        identifier = username,
+                        password = appPassword,
+                    )
+                )
+            }
+
+            return if (httpResponse.status.isSuccess()) {
+                ApiResult.Success(httpResponse.body())
+            } else {
+                ApiResult.Error(httpResponse.body())
+            }
+        } catch (e: Exception) {
+            return ApiResult.Error(
+                ErrorResponse(
+                    "UnknownHostException",
+                    "no internet"
                 )
             )
-        }
-
-        return if (httpResponse.status.isSuccess()) {
-            ApiResult.Success(httpResponse.body())
-        } else {
-            ApiResult.Error(httpResponse.body())
         }
     }
 }

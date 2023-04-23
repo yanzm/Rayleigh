@@ -3,7 +3,14 @@ import androidx.compose.runtime.Composable
 
 actual fun getPlatformName(): String = "Desktop"
 
-@Composable fun MainView() = App()
+@Composable
+fun MainView() {
+    App(
+        onOpenBrowser = {
+            // TODO
+        }
+    )
+}
 
 @Preview
 @Composable
