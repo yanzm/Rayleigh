@@ -18,7 +18,10 @@ compose = "1.4.0"
 hilt = "2.45"
 junit4 = "4.13.2"
 kotlin = "1.8.20"
+kotlinxCollections = "0.3.5"
 kotlinxCoroutines = "1.6.4"
+kotlinxDatetime = "0.4.0"
+kotlinxSerialization = "1.5.0"
 licenseTools = "1.2.8"
 paparazzi = "1.2.0"
 spotless = "6.11.0"
@@ -51,8 +54,12 @@ coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
 junit4 = { module = "junit:junit", version.ref = "junit4" }
+kotlinx-collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlinxCollections" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

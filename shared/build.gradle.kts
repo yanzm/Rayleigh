@@ -6,6 +6,7 @@ plugins {
     id("org.jetbrains.kotlin.native.cocoapods")
     alias(libs.plugins.android.library)
     alias(libs.plugins.compose)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
@@ -39,6 +40,11 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+
+                implementation(libs.kotlinx.collections.immutable)
+                implementation(libs.kotlinx.coroutines.core)
+                implementation(libs.kotlinx.serialization.json)
+                implementation(libs.kotlinx.datetime)
             }
         }
         val androidMain by getting {
