@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.Rayleigh" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">#2B6ED0</item>
+    </style>
+</resources>
