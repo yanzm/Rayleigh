@@ -1,13 +1,13 @@
 import androidx.compose.runtime.Composable
-import auth.AuthRepository
+import di.AppComponent
 
 @Composable
 fun MainView(
-    authRepository: AuthRepository,
+    appComponent: AppComponent,
     onOpenBrowser: (String) -> Unit
 ) {
     App(
-        authRepository = authRepository,
+        appComponent = appComponent,
         onOpenBrowser = onOpenBrowser
     )
 }

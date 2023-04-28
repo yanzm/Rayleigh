@@ -1,15 +1,17 @@
-import auth.AuthRepository
-import di.appModule
-import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
-import org.koin.core.context.startKoin
 
-class AppComponent : KoinComponent {
-    val authRepository: AuthRepository by inject()
-}
+import di.appModule
+import org.koin.core.context.startKoin
+import org.koin.dsl.module
 
 fun initKoin() {
     startKoin {
-        modules(appModule())
+        modules(appModule() + desktopModule)
     }
 }
+
+private val desktopModule = module {
+    // TODO
+//    single { createSettings() }
+}
+
+// fun createSettings(): Settings = Settings()

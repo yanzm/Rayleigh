@@ -2,11 +2,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
+import di.AppComponent
 
 fun main() {
     initKoin()
 
-    val authRepository = AppComponent().authRepository
+    val appComponent = AppComponent()
 
     application {
         Window(
@@ -14,7 +15,7 @@ fun main() {
             title = "Rayleigh",
             state = rememberWindowState(width = 400.dp, height = 800.dp),
         ) {
-            MainView(authRepository)
+            MainView(appComponent)
         }
     }
 }

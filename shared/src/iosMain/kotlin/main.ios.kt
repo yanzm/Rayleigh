@@ -1,12 +1,12 @@
 import androidx.compose.ui.window.ComposeUIViewController
-import auth.AuthRepository
+import di.AppComponent
 
 fun MainViewController(
-    authRepository: AuthRepository,
+    appComponent: AppComponent,
     onOpenBrowser: (String) -> Unit
 ) = ComposeUIViewController {
     App(
-        authRepository = authRepository,
+        appComponent = appComponent,
         onOpenBrowser = onOpenBrowser
     )
 }
