@@ -11,6 +11,7 @@ androidxHiltNavigationCompose = "1.0.0"
 androidxLifecycle = "2.6.1"
 androidxNavigation = "2.5.3"
 androidxTestEspresso = "3.5.1"
+androidxSecurityCrypto = "1.1.0-alpha06"
 androidxTestExt = "1.1.5"
 androidxUiautomator = "2.2.0"
 coil = "2.3.0"
@@ -26,6 +27,7 @@ kotlinxDatetime = "0.4.0"
 kotlinxSerialization = "1.5.0"
 ktor = "2.2.3"
 licenseTools = "1.2.8"
+multiplatformSettings = "1.0.0"
 paparazzi = "1.2.0"
 spotless = "6.11.0"
 
@@ -51,6 +53,7 @@ androidx-lifecycle-viewModel-compose = { module = "androidx.lifecycle:lifecycle-
 androidx-lifecycle-viewModel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidxLifecycle" }
 androidx-lifecycle-viewModel-savedState = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "androidxLifecycle" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidxNavigation" }
+androidx-security-crypto-ktx = { module = "androidx.security:security-crypto-ktx", version.ref = "androidxSecurityCrypto" }
 androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidxTestEspresso" }
 androidx-test-ext = { module = "androidx.test.ext:junit-ktx", version.ref = "androidxTestExt" }
 androidx-test-uiautomator = { module = "androidx.test.uiautomator:uiautomator", version.ref = "androidxUiautomator" }
@@ -76,6 +79,7 @@ ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "k
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatformSettings" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
