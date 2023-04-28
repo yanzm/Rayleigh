@@ -52,6 +52,8 @@ kotlin {
                 implementation(libs.ktor.client.logging)
                 implementation(libs.ktor.client.serialization)
                 implementation(libs.ktor.serialization.kotlinx.json)
+
+                api(libs.koin)
             }
         }
         val androidMain by getting {
@@ -61,6 +63,8 @@ kotlin {
 
                 implementation(libs.ktor.client.okhttp)
                 implementation(libs.androidx.lifecycle.ktx)
+
+                api(libs.koin.android)
             }
         }
         val iosMain by getting {

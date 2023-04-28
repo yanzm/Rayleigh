@@ -3,8 +3,12 @@ import SwiftUI
 import shared
 
 struct ComposeView: UIViewControllerRepresentable {
+
+    let authRepository = AppComponent().authRepository
+
     func makeUIViewController(context: Context) -> UIViewController {
         Main_iosKt.MainViewController(
+            authRepository: authRepository,
             onOpenBrowser: {
                 let url = URL(string:$0)!
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
