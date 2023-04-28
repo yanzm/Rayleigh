@@ -59,6 +59,7 @@ kotlin {
                 api(libs.androidx.core.ktx)
 
                 implementation(libs.ktor.client.okhttp)
+                implementation(libs.androidx.lifecycle.ktx)
             }
         }
         val iosMain by getting {
