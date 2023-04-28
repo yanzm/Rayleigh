@@ -1,19 +1,12 @@
-import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.runtime.Composable
-
-actual fun getPlatformName(): String = "Desktop"
+import auth.AuthRepository
 
 @Composable
-fun MainView() {
+fun MainView(authRepository: AuthRepository) {
     App(
+        authRepository = authRepository,
         onOpenBrowser = {
             // TODO
         }
     )
-}
-
-@Preview
-@Composable
-fun AppPreview() {
-    App()
 }
