@@ -3,6 +3,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import di.AppComponent
 import ui.home.HomeScreen
+import ui.home.HomeViewModel
 import ui.login.LoginScreen
 import ui.login.LoginViewModel
 import ui.theme.RayleighTheme
@@ -17,7 +18,10 @@ fun App(
         val appViewModel = remember { AppViewModel(appComponent.authRepository) }
         val isLoggedIn = appViewModel.isLoggedIn.collectAsState().value
         if (isLoggedIn) {
-            HomeScreen()
+            val viewModel = remember { HomeViewModel(appComponent.api) }
+            HomeScreen(
+                viewModel = viewModel
+            )
         } else {
             val viewModel = remember { LoginViewModel(appComponent.authRepository) }
             LoginScreen(

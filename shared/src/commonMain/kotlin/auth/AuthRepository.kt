@@ -1,6 +1,5 @@
 package auth
 
-import com.russhwolf.settings.Settings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -21,11 +20,11 @@ interface AuthRepository {
 
 class DefaultAuthRepository(
     private val api: BlueSkyApi,
-    private val settings: Settings,
+    private val tokenStore: TokenStore,
 ) : AuthRepository {
 
     private val _isLoggedIn = MutableStateFlow(
-        settings.getStringOrNull("accessJwt") != null
+        tokenStore.get() != null
     )
     override val isLoggedIn: StateFlow<Boolean> get() = _isLoggedIn
 
@@ -36,8 +35,7 @@ class DefaultAuthRepository(
         return withContext(Dispatchers.Default) {
             when (val result = api.createSession(username, appPassword)) {
                 is ApiResult.Success -> {
-                    settings.putString("accessJwt", result.data.accessJwt)
-                    settings.putString("refreshJwt", result.data.refreshJwt)
+                    tokenStore.save(result.data.accessJwt, result.data.refreshJwt)
                     _isLoggedIn.value = true
                     ApiResult.Success(Unit)
                 }
