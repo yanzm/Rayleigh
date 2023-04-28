@@ -54,6 +54,7 @@ kotlin {
                 implementation(libs.ktor.serialization.kotlinx.json)
 
                 api(libs.koin)
+                api(libs.multiplatform.settings)
             }
         }
         val androidMain by getting {

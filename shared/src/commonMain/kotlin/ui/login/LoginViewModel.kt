@@ -3,13 +3,15 @@ package ui.login
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import auth.AuthRepository
 import kotlinx.coroutines.launch
 import model.ApiResult
 import remote.ErrorResponse
 import viewmodel.CommonViewModel
-import kotlin.random.Random
 
-class LoginViewModel : CommonViewModel() {
+class LoginViewModel(
+    private val authRepository: AuthRepository
+) : CommonViewModel() {
 
     var uiState by mutableStateOf<UiState>(UiState.Idle)
         private set
@@ -31,12 +33,7 @@ class LoginViewModel : CommonViewModel() {
         uiState = UiState.Submitting
 
         viewModelScope.launch {
-            // TODO
-            val result = if (Random.nextBoolean()) {
-                ApiResult.Success(Unit)
-            } else {
-                ApiResult.Error(ErrorResponse("error", "error"))
-            }
+            val result = authRepository.login(username, appPassword)
             uiState = when (result) {
                 is ApiResult.Success -> UiState.Success
                 is ApiResult.Error -> UiState.Error(LoginError.ApiError(result.e))
